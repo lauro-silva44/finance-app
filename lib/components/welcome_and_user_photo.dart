@@ -52,6 +52,7 @@ class WelcomeAndUserPhoto extends StatelessWidget {
                   fit: BoxFit.cover,
                   image: AssetImage(
                     'assets/images/user-photo.jpg',
+
                   ),
                 ),
               ))
