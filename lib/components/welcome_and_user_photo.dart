@@ -16,7 +16,7 @@ class WelcomeAndUserPhoto extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(
-          horizontal: defaultPadding, vertical: defaultPadding),
+          horizontal: defaultPadding, vertical: defaultPadding - 10),
       child: Row(
         children: [
           Column(
@@ -52,7 +52,6 @@ class WelcomeAndUserPhoto extends StatelessWidget {
                   fit: BoxFit.cover,
                   image: AssetImage(
                     'assets/images/user-photo.jpg',
-
                   ),
                 ),
               ))

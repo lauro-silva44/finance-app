@@ -85,7 +85,7 @@ class BillCards extends StatelessWidget {
         const SizedBox(
           height: 5,
         ),
-        Text('eXP. $expDate',
+        Text('Exp. $expDate',
             style: GoogleFonts.raleway(
                 fontSize: 16, fontWeight: FontWeight.normal))
         //expiration date
