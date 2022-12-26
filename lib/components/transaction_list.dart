@@ -6,14 +6,16 @@ import 'package:google_fonts/google_fonts.dart';
 import '../utlis/constants.dart';
 
 class TransactionList extends StatelessWidget {
+  final double height;
   const TransactionList({
     Key? key,
+    required this.height,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 180,
+      height: height,
       child: ListView.builder(
           itemCount: transactions.length,
           itemBuilder: ((context, index) => Transaction(

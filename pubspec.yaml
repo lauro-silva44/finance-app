@@ -39,6 +39,7 @@ dependencies:
   flutter_emoji: ^2.4.0
   flutter_svg: ^1.1.6
   stacked_card_carousel: ^0.0.4
+  sleek_circular_slider: ^2.0.1
 
 dev_dependencies:
   flutter_test:
