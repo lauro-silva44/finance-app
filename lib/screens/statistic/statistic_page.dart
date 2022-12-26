@@ -2,8 +2,6 @@ import 'package:finance_app/components/bottom_navigation_bar.dart';
 import 'package:finance_app/components/transaction_list.dart';
 import 'package:finance_app/utlis/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
@@ -17,6 +15,8 @@ class StatisticPage extends StatefulWidget {
 }
 
 String _selectedValue = 'Expenses';
+double _value = 5;
+String _moneyInside = ((_value * 11056) / 100).toStringAsFixed(2);
 
 class _StatisticPageState extends State<StatisticPage> {
   @override
@@ -24,7 +24,7 @@ class _StatisticPageState extends State<StatisticPage> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_sharp,
             color: Colors.black,
           ),
@@ -37,7 +37,7 @@ class _StatisticPageState extends State<StatisticPage> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Spacer(),
+            const Spacer(),
             Text(
               'Statistics',
               style: GoogleFonts.raleway(
@@ -45,8 +45,8 @@ class _StatisticPageState extends State<StatisticPage> {
                   fontWeight: FontWeight.w600,
                   color: Colors.black),
             ),
-            Spacer(),
-            Icon(
+            const Spacer(),
+            const Icon(
               Icons.more_vert,
               color: Colors.black,
             ),
@@ -57,9 +57,15 @@ class _StatisticPageState extends State<StatisticPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Spacer(),
+            const Spacer(),
             Container(
               child: SleekCircularSlider(
+                onChange: (double value) {
+                  setState(() {
+                    _value = value;
+                    _moneyInside = ((_value * 11056) / 100).toStringAsFixed(2);
+                  });
+                },
                 innerWidget: (double value) {
                   value = 2.0;
                   return Center(
@@ -102,10 +108,10 @@ class _StatisticPageState extends State<StatisticPage> {
                                     style: GoogleFonts.raleway(
                                         fontSize: 12,
                                         fontWeight: FontWeight.bold)),
-                                Text('3.261',
+                                Text(_moneyInside,
                                     textAlign: TextAlign.center,
                                     style: GoogleFonts.raleway(
-                                        fontSize: 48,
+                                        fontSize: 28,
                                         fontWeight: FontWeight.bold)),
                               ],
                             ),
@@ -159,8 +165,8 @@ class _StatisticPageState extends State<StatisticPage> {
                         progressBarColor: Colors.black,
                         trackColor: myPurple,
                         hideShadow: false)),
-                initialValue: 10,
-                max: 20,
+                initialValue: _value,
+                max: 100,
                 min: 0,
               ),
             ),
