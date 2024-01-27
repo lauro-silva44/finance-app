@@ -3,7 +3,7 @@
 One of my initial projects developed with Flutter—a straightforward wallet app. I drew inspiration from Dribbble, making some modifications as part of my practice journey.
  ### Getting started
 
-## Run Locally
+### Run locally
 
 Clone the project
 
