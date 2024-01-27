@@ -1,12 +1,32 @@
-# Finance App
+### Finance App
 
-My first attempt to do a project with random layouts 
+One of my initial projects developed with Flutter—a straightforward wallet app. I drew inspiration from Dribbble, making some modifications as part of my practice journey.
+ ### Getting started
 
-This project made me learning a lot buy myself, trying to resolve my problem by my own 
+## Run Locally
 
-## 🔗 Links
+Clone the project
 
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lauro-silva/)
+```bash
+  git clone [https://link-to-project](https://github.com/lauro-silva44/finance-app)
+```
 
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  flutter pub get
+```
+
+Run the app
+
+```bash
+   flutter run
+```
 
 ![Project-Screen](assets/images/screen-shot.png)
